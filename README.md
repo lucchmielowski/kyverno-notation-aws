@@ -377,3 +377,5 @@ Each TrustStore will then have to be configured with the appropriate root certif
 The [sample TrustStore](./configs/samples/truststore.yaml) contains examples you can customize with your account and region information.
 
 For more information, please refer to: https://docs.aws.amazon.com/signer/latest/developerguide/image-verification.html.
+
+TEST TO REMOVE
