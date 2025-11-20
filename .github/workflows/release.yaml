@@ -126,8 +126,8 @@ jobs:
           helm registry login ghcr.io -u ${{ github.actor }} --password ${{ secrets.GITHUB_TOKEN }}
       - name: Publish OCI Helm chart
         run: |
-          helm packages charts/kyverno-notation-aws --version ${{ steps.version.outputs.fullversion }} --destination ./dist
+          helm package charts/kyverno-notation-aws --version ${{ steps.version.outputs.fullversion }} --destination ./dist
           helm push ./dist/kyverno-notation-aws-*.tgz oci://ghcr.io/${{ github.repository_owner }}/charts |& tee .digest
-          cosigin login --username ${{ github.actor }} --password ${{ secrets.GITHUB_TOKEN }} ghcr.io
+          cosign login --username ${{ github.actor }} --password ${{ secrets.GITHUB_TOKEN }} ghcr.io
           cosign sign --yes ghcr.io/${{ github.repository_owner }}/kyverno-notation-aws/charts@$(cat .digest | awk -F "[, ]" '/Digest/{print $NF}')
 
