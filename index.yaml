@@ -3,9 +3,9 @@ entries:
   kyverno-notation-aws:
   - apiVersion: v2
     appVersion: v1.1
-    created: "2025-11-26T09:45:13.457911688Z"
+    created: "2025-11-26T09:55:31.648719995Z"
     description: Kyverno extension service for Notation and the AWS signer
-    digest: 0e64d5889d98220449c62b97e995284bb2a8d4534f43e9c81715290616a228bd
+    digest: cd8821209422817cd7275a5ecc883473849b546059addf5037aef47df63efc8b
     keywords:
     - kubernetes
     - nirmata
@@ -46,4 +46,4 @@ entries:
     urls:
     - https://lucchmielowski.github.io/kyverno-notation-aws/kyverno-notation-aws-1.1.0.tgz
     version: 1.1.0
-generated: "2025-11-26T09:45:13.457135602Z"
+generated: "2025-11-26T09:55:31.647798849Z"
